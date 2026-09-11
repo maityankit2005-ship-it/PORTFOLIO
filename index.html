@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Maity — UI/UX Designer & Creative Technologist</title>
+  <meta name="description" content="Portfolio of Ankit Maity — B.Tech CSE student specializing in UI/UX design, frontend development, animation, and game development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+  <!-- Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Follower -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-mark">✦</div>
+      <div class="preloader-title">Ankit Maity</div>
+      <div class="preloader-subtitle">Design • Engineering • Worlds</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress" id="preloaderProgress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Navigation -->
+  <header class="header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand" aria-label="Ankit Maity Home">
+        <span class="brand-symbol">✦</span>
+        <span class="brand-text">Ankit Maity</span>
+      </a>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#games" class="nav-link">Games</a>
+        <a href="#learning" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="status-badge status-badge-nav" title="Availability Status">
+          <span class="pulse-dot"></span>
+          <span class="status-text">Creating & learning</span>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-canvas-wrap">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-status-tag animate-fade">
+          <span class="pulse-dot"></span>
+          <span>B.Tech Computer Science Engineering • UI/UX Specialization</span>
+        </div>
+
+        <div class="hero-headline-wrap">
+          <h1 class="hero-title">
+            Hi, I'm <span class="serif-italic">Ankit Maity.</span>
+          </h1>
+          <p class="hero-tagline">
+            I design interfaces, build experiences, and create games.
+          </p>
+        </div>
+
+        <div class="hero-role-rotator" aria-label="Professional focus areas">
+          <span class="role-rotator-label">Exploring as:</span>
+          <div class="role-rotator-viewport">
+            <span class="role-item active" data-index="0">UI/UX Designer</span>
+            <span class="role-item" data-index="1">Frontend Developer</span>
+            <span class="role-item" data-index="2">Game Developer</span>
+            <span class="role-item" data-index="3">Creative Coder</span>
+          </div>
+        </div>
+
+        <p class="hero-description">
+          B.Tech CSE student specializing in UI/UX, with a deep passion for frontend craft,
+          visual design systems, micro-interactions, and immersive gameplay mechanics.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary magnetic-btn">
+            <span>Explore My Work</span>
+            <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary magnetic-btn">
+            <span>Let's Connect</span>
+          </a>
+        </div>
+
+        <!-- Annotation -->
+        <div class="hero-handwritten" aria-hidden="true">
+          <span>curious mind & digital craftsman ↗</span>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <a href="#about" aria-label="Scroll to About section">
+            <span class="mouse-icon">
+              <span class="mouse-wheel"></span>
+            </span>
+            <span class="scroll-label">Scroll to explore</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER 1 -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">UI/UX DESIGN ✦</span>
+        <span class="marquee-item">FRONTEND CRAFT ✦</span>
+        <span class="marquee-item">GAME MECHANICS ✦</span>
+        <span class="marquee-item">INTERACTION DESIGN ✦</span>
+        <span class="marquee-item">CREATIVE CODING ✦</span>
+        <span class="marquee-item">ACCESSIBLE EXPERIENCES ✦</span>
+        <span class="marquee-item">UI/UX DESIGN ✦</span>
+        <span class="marquee-item">FRONTEND CRAFT ✦</span>
+        <span class="marquee-item">GAME MECHANICS ✦</span>
+        <span class="marquee-item">INTERACTION DESIGN ✦</span>
+        <span class="marquee-item">CREATIVE CODING ✦</span>
+        <span class="marquee-item">ACCESSIBLE EXPERIENCES ✦</span>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-number">01</span>
+          <span class="label-line"></span>
+          <span class="label-text">Background & Mindset</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative">
+            <h2 class="section-title">
+              A little <span class="serif-italic">about me.</span>
+            </h2>
+
+            <div class="about-bio">
+              <p class="lead-p">
+                I'm <strong>Ankit Maity</strong>, a B.Tech Computer Science Engineering student
+                specializing in UI/UX design. I bridge the nuance of thoughtful visual aesthetics
+                with the rigor of clean, efficient code.
+              </p>
+              <p>
+                Rather than treating design and software engineering as isolated silos, I look at them
+                as complementary dialects of the same medium. Turning raw concepts into responsive,
+                delightful, and tangible digital interfaces is what drives my work every day.
+              </p>
+              <p>
+                From sketching fluid design systems in Figma to tuning physics controllers in game engines
+                or coding accessible web components, I prioritize intentionality, tactile feedback, and
+                human-centric empathy.
+              </p>
+            </div>
+
+            <div class="about-quote-box">
+              <span class="quote-mark">“</span>
+              <p>Great design isn't decorated afterthought—it is engineering made intuitive, respectful, and joyful.</p>
+            </div>
+
+            <div class="handwritten-note">
+              <span>design + technology = memorable experiences</span>
+            </div>
+          </div>
+
+          <div class="about-cards-column">
+            <div class="info-card info-card-tilt" data-tilt>
+              <div class="card-icon">🎓</div>
+              <div class="card-header-group">
+                <span class="card-kicker">Academic Foundation</span>
+                <h3 class="card-heading">B.Tech CSE</h3>
+              </div>
+              <p class="card-desc">Computer Science Engineering with an emphasis on Human-Computer Interaction & Software Architecture.</p>
+              <div class="card-tag">Computer Science</div>
+            </div>
+
+            <div class="info-card info-card-tilt" data-tilt>
+              <div class="card-icon">📐</div>
+              <div class="card-header-group">
+                <span class="card-kicker">Core Specialization</span>
+                <h3 class="card-heading">UI/UX + Frontend</h3>
+              </div>
+              <p class="card-desc">Translating complex user journeys into friction-free wireframes, high-fidelity mockups, and modular frontends.</p>
+              <div class="card-tag">Interface Design</div>
+            </div>
+
+            <div class="info-card info-card-tilt" data-tilt>
+              <div class="card-icon">🕹️</div>
+              <div class="card-header-group">
+                <span class="card-kicker">Creative Discipline</span>
+                <h3 class="card-heading">Game Dev + Animation</h3>
+              </div>
+              <p class="card-desc">Exploring game loops, sprite animations, physics, dynamic camera work, and sound feedback design.</p>
+              <div class="card-tag">Interactive Worlds</div>
+            </div>
+
+            <div class="info-card info-card-tilt highlight-card" data-tilt>
+              <div class="card-icon">✦</div>
+              <div class="card-header-group">
+                <span class="card-kicker">Operating Ethos</span>
+                <h3 class="card-heading">Mindset</h3>
+              </div>
+              <p class="card-desc highlight-text">
+                <span class="chip">Design.</span>
+                <span class="chip">Build.</span>
+                <span class="chip">Experiment.</span>
+                <span class="chip">Refine.</span>
+              </p>
+              <div class="card-tag">Philosophy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-number">02</span>
+          <span class="label-line"></span>
+          <span class="label-text">Technical & Visual Repertoire</span>
+        </div>
+
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title">
+              Crafted <span class="serif-italic">capabilities.</span>
+            </h2>
+            <p class="section-subtitle">A balanced toolkit spanning interface design, engineering, game mechanics, and modern toolchains.</p>
+          </div>
+          <div class="skills-filter-nav" role="tablist">
+            <button class="skill-tab active" data-filter="all">All Skills</button>
+            <button class="skill-tab" data-filter="uiux">UI/UX</button>
+            <button class="skill-tab" data-filter="dev">Development</button>
+            <button class="skill-tab" data-filter="creative">Creative & Games</button>
+            <button class="skill-tab" data-filter="tools">Tools</button>
+          </div>
+        </div>
+
+        <div class="skills-container-grid">
+          <!-- UI/UX Group -->
+          <div class="skill-category-card" data-category="uiux">
+            <div class="category-top">
+              <span class="category-badge">Visual & Experience</span>
+              <h3 class="category-title">UI/UX Design</h3>
+            </div>
+            <p class="category-summary">Crafting empathetic interfaces backed by user research, systematic hierarchy, and rapid iteration.</p>
+            <div class="pills-cloud">
+              <div class="skill-pill" data-desc="Information architecture, low & high-fidelity user flows."><span>UI Design</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Empathetic user research, persona creation, and friction mapping."><span>UX Research</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Rapid structural wireframes to validate layout and hierarchy."><span>Wireframing</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="High-fidelity interactive state transitions & clickable mockups."><span>Prototyping</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Solving genuine user pain-points with iterative usability testing."><span>User-Centered Design</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Reusable design tokens, component libraries & typography scales."><span>Design Systems</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Color theory, contrast ratios, micro-typography, and spatial balance."><span>Visual Design</span><span class="pill-dot"></span></div>
+            </div>
+          </div>
+
+          <!-- Development Group -->
+          <div class="skill-category-card" data-category="dev">
+            <div class="category-top">
+              <span class="category-badge">Engineering & Architecture</span>
+              <h3 class="category-title">Development</h3>
+            </div>
+            <p class="category-summary">Writing semantic, maintainable, and standards-compliant code with a focus on performant experiences.</p>
+            <div class="pills-cloud">
+              <div class="skill-pill" data-desc="Semantic, accessible HTML5 structure with strict SEO compliance."><span>HTML5</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Modern CSS3, custom properties, Flexbox, Grid & fluid layouts."><span>CSS3</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Modern ES6+ syntax, asynchronous programming, DOM APIs."><span>JavaScript (ES6+)</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Core algorithmic programming, data analysis & automation scripting."><span>Python</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Relational database schemas, queries, normalization & indexing."><span>SQL</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Server-side JavaScript runtimes, micro-services, and CLI scripts."><span>Node.js</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Endpoint integration, JSON payloads, async fetching and error handling."><span>REST APIs</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Version control, trunk-based workflows, branching & pull requests."><span>Git & GitHub</span><span class="pill-dot"></span></div>
+            </div>
+          </div>
+
+          <!-- Creative / Game Dev Group -->
+          <div class="skill-category-card" data-category="creative">
+            <div class="category-top">
+              <span class="category-badge">Interactive Systems</span>
+              <h3 class="category-title">Creative & Game Dev</h3>
+            </div>
+            <p class="category-summary">Designing game loops, sprite movement, feedback states, and dynamic canvas rendering.</p>
+            <div class="pills-cloud">
+              <div class="skill-pill" data-desc="Tick-based game loops, state managers, and entity architectures."><span>Game Development</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="2D sprite rendering, collision detection, and coordinate transforms."><span>2D Game Systems</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="HUDs, pause menus, dynamic score displays, and tactile overlays."><span>Game UI / HUD</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Frame-rate independent animations, easing curves & particle bursts."><span>Animations</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Canvas-driven exploratory experiments & physics play."><span>Interactive Experiences</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Acceleration, steering curves, friction coefficients & puzzles."><span>Game Mechanics</span><span class="pill-dot"></span></div>
+            </div>
+          </div>
+
+          <!-- Tools Group -->
+          <div class="skill-category-card" data-category="tools">
+            <div class="category-top">
+              <span class="category-badge">Daily Workflow</span>
+              <h3 class="category-title">Tools & Ecosystem</h3>
+            </div>
+            <p class="category-summary">Leveraging modern industry-standard platforms for prototyping, testing, and shipping.</p>
+            <div class="pills-cloud">
+              <div class="skill-pill" data-desc="Primary canvas for wireframing, component tokens and design systems."><span>Figma</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Collaboration, versioning, issues, releases, and CI/CD basics."><span>GitHub</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Configured IDE for high-speed typing, linting, and live debugging."><span>VS Code</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="Package management (npm), scripts, bundling and modules."><span>Node Ecosystem</span><span class="pill-dot"></span></div>
+              <div class="skill-pill" data-desc="DevTools profiling, lighthouse metrics, responsive device emulation."><span>Browser DevTools</span><span class="pill-dot"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK SECTION -->
+    <section class="section work-section" id="projects">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-number">03</span>
+          <span class="label-line"></span>
+          <span class="label-text">Selected Portfolio Works</span>
+        </div>
+
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title">
+              Things I've <span class="serif-italic">built.</span>
+            </h2>
+            <p class="section-subtitle">Realized games and interactive engineering experiments with attention to tactile feel.</p>
+          </div>
+          <div class="handwritten-note">
+            <span>crafted from first principles ✦</span>
+          </div>
+        </div>
+
+        <!-- FEATURED PROJECT 01: LUMBO -->
+        <article class="featured-project-card project-lumbo" data-tilt>
+          <div class="project-content-col">
+            <div class="project-header-meta">
+              <span class="project-badge">Featured Game Experience</span>
+              <span class="project-index">01 / 02</span>
+            </div>
+
+            <h3 class="project-title">LUMBO</h3>
+            <span class="project-category-tag">Game Development • Interactive Systems</span>
+
+            <p class="project-description">
+              A stylized racing game focused on an engaging visual experience, smooth animations,
+              immersive gameplay feel, and polished interactions. Engineered with custom track logic,
+              car physics curves, responsive camera controls, and rich acoustic/visual feedback.
+            </p>
+
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <span class="hl-icon">🏎️</span>
+                <div>
+                  <strong>Racing Gameplay</strong>
+                  <p>Fine-tuned acceleration, drift deceleration, and track boundary detection.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">⚙️</span>
+                <div>
+                  <strong>Game Mechanics</strong>
+                  <p>Lap timing, collision physics, speed bursts, and progress checkpoints.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">✨</span>
+                <div>
+                  <strong>Animations & Feedback</strong>
+                  <p>Particle dust trails, camera follow shake, and tactile speedometer displays.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">📱</span>
+                <div>
+                  <strong>Mobile-Oriented UX</strong>
+                  <p>Ergonomic touch controls & adaptive HUD scaling across viewport ratios.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="tech-chip">HTML5 Canvas</span>
+              <span class="tech-chip">JavaScript (ES6+)</span>
+              <span class="tech-chip">Custom Physics</span>
+              <span class="tech-chip">Game Audio API</span>
+              <span class="tech-chip">Responsive UI</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary interactive-demo-trigger" data-target="lumboModal">
+                <span>View Project & Interactive Sim</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <a href="https://github.com/maityankit2005-ship-it" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Live Visual Preview for LUMBO -->
+          <div class="project-visual-col">
+            <div class="interactive-preview-frame">
+              <div class="preview-header">
+                <div class="mac-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="preview-title-bar">LUMBO // Realtime Physics Simulation</div>
+                <div class="preview-live-indicator">LIVE CANVAS</div>
+              </div>
+              <div class="preview-canvas-wrapper">
+                <canvas id="lumboCanvas" width="560" height="380" aria-label="LUMBO Racing Game Simulation"></canvas>
+                <div class="canvas-controls-overlay">
+                  <button class="sim-pill-btn" id="lumboTurboBtn">🚀 Boost Speed</button>
+                  <button class="sim-pill-btn" id="lumboToggleWeather">🌧️ Weather Mode</button>
+                </div>
+              </div>
+              <div class="preview-footer-stats">
+                <span>Speed: <strong id="simSpeedVal">128 km/h</strong></span>
+                <span>Track: <strong>Stylized Circuit</strong></span>
+                <span>FPS: <strong>60</strong></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- FEATURED PROJECT 02: CANDY CRUSH MINI -->
+        <article class="featured-project-card project-candy" data-tilt>
+          <div class="project-visual-col">
+            <div class="interactive-preview-frame">
+              <div class="preview-header">
+                <div class="mac-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="preview-title-bar">Candy Crush Mini // Interactive Tile Grid</div>
+                <div class="preview-live-indicator">PLAYABLE</div>
+              </div>
+              <div class="interactive-candy-board" id="candyBoard">
+                <!-- Tiles dynamically generated via JavaScript -->
+              </div>
+              <div class="preview-footer-stats">
+                <span>Score: <strong id="candyScore">2,450</strong></span>
+                <span>Matches: <strong id="candyMatches">12</strong></span>
+                <button class="candy-reset-btn" id="candyResetBtn">Shuffle Board</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content-col">
+            <div class="project-header-meta">
+              <span class="project-badge">Puzzle & UI Mechanics</span>
+              <span class="project-index">02 / 02</span>
+            </div>
+
+            <h3 class="project-title">Candy Crush Mini</h3>
+            <span class="project-category-tag">Game Development • Interactive Design</span>
+
+            <p class="project-description">
+              A compact match-style puzzle game experiment designed around colorful micro-interactions,
+              grid-swapping logic, tactile animation easing, and satisfying combo feedback loops.
+            </p>
+
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <span class="hl-icon">🍬</span>
+                <div>
+                  <strong>Match-Style Gameplay</strong>
+                  <p>Horizontal & vertical line detection with cascade falling algorithms.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">✨</span>
+                <div>
+                  <strong>Interactive Animations</strong>
+                  <p>Squash-and-stretch tile drops, particle burst pops, and dynamic hover glow.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🎛️</span>
+                <div>
+                  <strong>Tactile UI Design</strong>
+                  <p>Accessible contrast palettes, playful sound stagers, and fluid score counters.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="hl-icon">🎯</span>
+                <div>
+                  <strong>Visual Feedback</strong>
+                  <p>Immediate tactile response on tile drag, swaps, and combo chain multipliers.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="tech-chip">JavaScript (ES6+)</span>
+              <span class="tech-chip">CSS Grid & Keyframes</span>
+              <span class="tech-chip">Matrix Algorithms</span>
+              <span class="tech-chip">Sound Feedback</span>
+              <span class="tech-chip">Touch Events</span>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-primary interactive-demo-trigger" data-target="candyModal">
+                <span>View Full Project Overview</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- OTHER DEVELOPMENT WORK GRID -->
+        <div class="other-work-section">
+          <div class="other-work-header">
+            <div>
+              <h3 class="other-work-title">Other Engineering & Explorations</h3>
+              <p class="other-work-desc">Targeted experiments spanning computational problem solving, backend routines, and UX prototypes.</p>
+            </div>
+          </div>
+
+          <div class="other-work-grid">
+            <!-- Card 1 -->
+            <div class="mini-project-card" data-tilt>
+              <div class="mini-card-top">
+                <span class="mini-cat">Backend / System</span>
+                <span class="mini-year">Python</span>
+              </div>
+              <h4 class="mini-title">Python Automation & Algorithmic Scripts</h4>
+              <p class="mini-desc">
+                Data pipeline parsing scripts, algorithmic problem-solving suites, and automation
+                routines applying core CS data structures.
+              </p>
+              <div class="mini-tags">
+                <span>Algorithms</span>
+                <span>Data Structures</span>
+                <span>CLI</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="mini-project-card" data-tilt>
+              <div class="mini-card-top">
+                <span class="mini-cat">Data Systems</span>
+                <span class="mini-year">SQL</span>
+              </div>
+              <h4 class="mini-title">Relational Database Schemas & Queries</h4>
+              <p class="mini-desc">
+                Normalized database architectures, multi-table JOIN query optimization, transaction
+                handling, and schema management experiments.
+              </p>
+              <div class="mini-tags">
+                <span>Relational Design</span>
+                <span>PostgreSQL / MySQL</span>
+                <span>Indexing</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="mini-project-card" data-tilt>
+              <div class="mini-card-top">
+                <span class="mini-cat">Server Environment</span>
+                <span class="mini-year">Node.js</span>
+              </div>
+              <h4 class="mini-title">RESTful API Endpoints & Microservices</h4>
+              <p class="mini-desc">
+                Lightweight Express servers, token authentication middleware, JSON payload sanitization,
+                and asynchronous data streams.
+              </p>
+              <div class="mini-tags">
+                <span>Express</span>
+                <span>Async / Await</span>
+                <span>REST</span>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="mini-project-card" data-tilt>
+              <div class="mini-card-top">
+                <span class="mini-cat">Interface & Interaction</span>
+                <span class="mini-year">JavaScript</span>
+              </div>
+              <h4 class="mini-title">Micro-Interactions & UI Component Library</h4>
+              <p class="mini-desc">
+                Collection of custom slider elements, magnetic cursor triggers, responsive navigation menus,
+                and accessible modal dialog patterns.
+              </p>
+              <div class="mini-tags">
+                <span>Vanilla JS</span>
+                <span>WCAG</span>
+                <span>CSS Variables</span>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="mini-project-card" data-tilt>
+              <div class="mini-card-top">
+                <span class="mini-cat">Design Systems</span>
+                <span class="mini-year">UI/UX</span>
+              </div>
+              <h4 class="mini-title">Design Token Architecture & Spacing Scales</h4>
+              <p class="mini-desc">
+                Figma-to-code design tokens bridging typography scales, color contrast matrices,
+                and spatial grids into developer-ready CSS variables.
+              </p>
+              <div class="mini-tags">
+                <span>Figma</span>
+                <span>Token Design</span>
+                <span>Design Ops</span>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="mini-project-card" data-tilt>
+              <div class="mini-card-top">
+                <span class="mini-cat">Creative Sandbox</span>
+                <span class="mini-year">Canvas</span>
+              </div>
+              <h4 class="mini-title">Generative Particle Systems & Canvas Demos</h4>
+              <p class="mini-desc">
+                Lightweight vector math, gravity simulation particles, and mouse-follow trails
+                optimized for continuous 60fps frame rates.
+              </p>
+              <div class="mini-tags">
+                <span>requestAnimationFrame</span>
+                <span>Math & Vectors</span>
+                <span>Physics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE GAME SHOWCASE ("I don't just design screens. I build worlds.") -->
+    <section class="section games-showcase-section" id="games">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-number">04</span>
+          <span class="label-line"></span>
+          <span class="label-text">The Worldbuilding Process</span>
+        </div>
+
+        <div class="worldbuilding-header">
+          <h2 class="worldbuilding-title">
+            "I don't just design screens.<br>
+            <span class="serif-italic">I build worlds."</span>
+          </h2>
+          <p class="worldbuilding-sub">
+            Bridging interactive mechanics with visual delight. Every game represents a microcosm
+            where physics, rules, art direction, and tactile user response coalesce.
+          </p>
+        </div>
+
+        <!-- Interactive Visual Timeline -->
+        <div class="game-timeline-wrapper">
+          <div class="timeline-title-row">
+            <span class="timeline-subheading">Production Pipeline</span>
+            <span class="timeline-hint">Click any stage to inspect the craft</span>
+          </div>
+
+          <div class="pipeline-track" id="pipelineTrack">
+            <!-- Stage 1 -->
+            <div class="pipeline-step active" data-stage="0">
+              <div class="step-num">01</div>
+              <div class="step-label">Idea</div>
+              <div class="step-icon">💡</div>
+            </div>
+            <div class="pipeline-connector"></div>
+
+            <!-- Stage 2 -->
+            <div class="pipeline-step" data-stage="1">
+              <div class="step-num">02</div>
+              <div class="step-label">Design</div>
+              <div class="step-icon">📐</div>
+            </div>
+            <div class="pipeline-connector"></div>
+
+            <!-- Stage 3 -->
+            <div class="pipeline-step" data-stage="2">
+              <div class="step-num">03</div>
+              <div class="step-label">Mechanics</div>
+              <div class="step-icon">⚙️</div>
+            </div>
+            <div class="pipeline-connector"></div>
+
+            <!-- Stage 4 -->
+            <div class="pipeline-step" data-stage="3">
+              <div class="step-num">04</div>
+              <div class="step-label">Animation</div>
+              <div class="step-icon">🎬</div>
+            </div>
+            <div class="pipeline-connector"></div>
+
+            <!-- Stage 5 -->
+            <div class="pipeline-step" data-stage="4">
+              <div class="step-num">05</div>
+              <div class="step-label">Play</div>
+              <div class="step-icon">🎮</div>
+            </div>
+            <div class="pipeline-connector"></div>
+
+            <!-- Stage 6 -->
+            <div class="pipeline-step" data-stage="5">
+              <div class="step-num">06</div>
+              <div class="step-label">Polish</div>
+              <div class="step-icon">✨</div>
+            </div>
+          </div>
+
+          <!-- Dynamic Pipeline Content Card -->
+          <div class="pipeline-detail-card" id="pipelineDetail">
+            <div class="pipeline-detail-header">
+              <span class="pipeline-phase-badge" id="pipelinePhaseBadge">Stage 01 • Conceptualization</span>
+              <h3 class="pipeline-phase-title" id="pipelinePhaseTitle">Idea: Identifying Core Emotional Loop</h3>
+            </div>
+            <p class="pipeline-phase-desc" id="pipelinePhaseDesc">
+              Defining the core spark: Is it high-speed drift tension (LUMBO) or the calming satisfaction of matching geometric colors (Candy Crush Mini)? Establishing what makes the player want to press 'restart'.
+            </p>
+            <div class="pipeline-deliverables" id="pipelineDeliverables">
+              <span class="d-chip">Core Loop Diagrams</span>
+              <span class="d-chip">Emotional Tone Palette</span>
+              <span class="d-chip">Player Motivation Pillars</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini Interactive Particle Playground -->
+        <div class="interactive-sandbox-card">
+          <div class="sandbox-header">
+            <div>
+              <span class="sandbox-tag">Interactive Playground</span>
+              <h4 class="sandbox-title">Physics & Particle Sandbox</h4>
+            </div>
+            <div class="sandbox-actions">
+              <button class="sandbox-btn" id="clearParticlesBtn">Reset Particles</button>
+              <button class="sandbox-btn" id="gravityToggleBtn">Toggle Gravity: ON</button>
+            </div>
+          </div>
+          <div class="sandbox-canvas-wrap">
+            <canvas id="sandboxCanvas" height="260" aria-label="Interactive particle gravity simulation"></canvas>
+            <div class="sandbox-instruction">Click or move your mouse here to spawn kinetic sparks</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN PHILOSOPHY SECTION -->
+    <section class="section philosophy-section" id="philosophy">
+      <div class="marquee-strip large-marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-item bold">DESIGN • BUILD • ANIMATE • EXPERIMENT • REPEAT</span>
+          <span class="marquee-item bold">DESIGN • BUILD • ANIMATE • EXPERIMENT • REPEAT</span>
+          <span class="marquee-item bold">DESIGN • BUILD • ANIMATE • EXPERIMENT • REPEAT</span>
+        </div>
+      </div>
+
+      <div class="container philosophy-container">
+        <div class="philosophy-card">
+          <div class="philosophy-kicker">Design Philosophy</div>
+          <h2 class="philosophy-title">
+            "Design is not just <span class="serif-italic">how it looks."</span>
+          </h2>
+          <div class="philosophy-body">
+            <p class="philosophy-lead">
+              "I like creating experiences where visual design, interaction, and functionality work together.
+              Whether it's a website interface or a game, my goal is to make every interaction feel intentional."
+            </p>
+            <div class="philosophy-pillars">
+              <div class="pillar">
+                <span class="pillar-num">I</span>
+                <h4>Intentional Form</h4>
+                <p>Every pixel, margin, and type size exists for clarity, not ornament.</p>
+              </div>
+              <div class="pillar">
+                <span class="pillar-num">II</span>
+                <h4>Tactile Rhythm</h4>
+                <p>Digital surfaces should feel alive—responding with smooth deceleration, weight, and subtle depth.</p>
+              </div>
+              <div class="pillar">
+                <span class="pillar-num">III</span>
+                <h4>Technical Honesty</h4>
+                <p>Design must be implementable, robust across screens, and accessible to everyone.</p>
+              </div>
+            </div>
+          </div>
+          <div class="philosophy-author">
+            <span class="author-sign">Ankit Maity</span>
+            <span class="author-role">B.Tech CSE • UI/UX Specialization</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / LEARNING JOURNEY -->
+    <section class="section learning-section" id="learning">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-number">05</span>
+          <span class="label-line"></span>
+          <span class="label-text">Continuous Evolution</span>
+        </div>
+
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title">
+              Currently Learning & <span class="serif-italic">Building.</span>
+            </h2>
+            <p class="section-subtitle">
+              An authentic progression journey as a B.Tech Computer Science student expanding craft through hands-on project builds.
+            </p>
+          </div>
+        </div>
+
+        <div class="journey-grid">
+          <!-- Journey Card 1 -->
+          <div class="journey-card">
+            <div class="journey-status-bar">
+              <span class="journey-phase">ACTIVE EXPLORATION</span>
+              <span class="journey-percent">Deep Dive</span>
+            </div>
+            <h3 class="journey-title">UI/UX Design Systems</h3>
+            <p class="journey-text">
+              Investigating advanced Figma auto-layout mechanics, multi-brand token frameworks,
+              accessibility contrast compliance, and user journey heuristics.
+            </p>
+            <div class="journey-progress-track">
+              <div class="journey-progress-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+
+          <!-- Journey Card 2 -->
+          <div class="journey-card">
+            <div class="journey-status-bar">
+              <span class="journey-phase">ACTIVE EXPLORATION</span>
+              <span class="journey-percent">Building</span>
+            </div>
+            <h3 class="journey-title">Frontend Architecture</h3>
+            <p class="journey-text">
+              Mastering modern vanilla web foundations, component lifecycles, CSS custom properties,
+              responsive viewport calculations, and seamless page transitions.
+            </p>
+            <div class="journey-progress-track">
+              <div class="journey-progress-fill" style="width: 82%;"></div>
+            </div>
+          </div>
+
+          <!-- Journey Card 3 -->
+          <div class="journey-card">
+            <div class="journey-status-bar">
+              <span class="journey-phase">ACTIVE EXPLORATION</span>
+              <span class="journey-percent">Iterating</span>
+            </div>
+            <h3 class="journey-title">Game Development & Loops</h3>
+            <p class="journey-text">
+              Studying 2D physics engines, collision resolution vectors, state machines, sound design
+              layering, and custom game camera controllers.
+            </p>
+            <div class="journey-progress-track">
+              <div class="journey-progress-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+
+          <!-- Journey Card 4 -->
+          <div class="journey-card">
+            <div class="journey-status-bar">
+              <span class="journey-phase">FOUNDATIONAL</span>
+              <span class="journey-percent">Core CS</span>
+            </div>
+            <h3 class="journey-title">Computer Science Engineering</h3>
+            <p class="journey-text">
+              Deepening understanding of Data Structures & Algorithms, Object-Oriented design,
+              operating systems, database indexing, and computer networks.
+            </p>
+            <div class="journey-progress-track">
+              <div class="journey-progress-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+
+          <!-- Journey Card 5 -->
+          <div class="journey-card">
+            <div class="journey-status-bar">
+              <span class="journey-phase">EXPERIMENTAL</span>
+              <span class="journey-percent">Exploration</span>
+            </div>
+            <h3 class="journey-title">Creative Coding & Canvas</h3>
+            <p class="journey-text">
+              Exploring HTML5 Canvas rendering pipelines, math-based particle movement, generative
+              grid patterns, and interactive pointer interactions.
+            </p>
+            <div class="journey-progress-track">
+              <div class="journey-progress-fill" style="width: 75%;"></div>
+            </div>
+          </div>
+
+          <!-- Journey Card 6 -->
+          <div class="journey-card">
+            <div class="journey-status-bar">
+              <span class="journey-phase">PRACTICE</span>
+              <span class="journey-percent">Active</span>
+            </div>
+            <h3 class="journey-title">Backend Routines & Node.js</h3>
+            <p class="journey-text">
+              Writing lightweight REST endpoints, asynchronous file parsers, and exploring how
+              frontend consumers receive and process structured data.
+            </p>
+            <div class="journey-progress-track">
+              <div class="journey-progress-fill" style="width: 70%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB SECTION -->
+    <section class="section github-section" id="github">
+      <div class="container">
+        <div class="github-card-banner">
+          <div class="github-inner-content">
+            <div class="github-icon-wrap">
+              <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </div>
+            <div class="github-text-side">
+              <h3 class="github-title">More experiments live on GitHub.</h3>
+              <p class="github-desc">
+                From coding experiments to games, web projects, and algorithms—I'm constantly building, testing, breaking, and learning.
+              </p>
+            </div>
+            <div class="github-cta-side">
+              <a href="https://github.com/maityankit2005-ship-it" target="_blank" rel="noopener noreferrer" class="btn btn-primary github-big-btn">
+                <span>Visit GitHub</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-label">
+          <span class="label-number">06</span>
+          <span class="label-line"></span>
+          <span class="label-text">Start a Conversation</span>
+        </div>
+
+        <div class="contact-header">
+          <h2 class="contact-title">
+            Have an <span class="serif-italic">idea?</span>
+          </h2>
+          <p class="contact-subtitle">
+            Let's build something worth remembering.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Links / Info -->
+          <div class="contact-info-col">
+            <p class="contact-intro">
+              Whether you want to discuss a creative project, share feedback on my games,
+              explore a UI/UX collaboration, or simply connect—my inbox is always open.
+            </p>
+
+            <div class="contact-links-list">
+              <a href="mailto:pjexplained2005@gmail.com" class="contact-card-link">
+                <div class="contact-card-icon">✉️</div>
+                <div class="contact-card-details">
+                  <span class="contact-card-type">Email</span>
+                  <span class="contact-card-val">pjexplained2005@gmail.com</span>
+                </div>
+                <span class="contact-card-arrow">↗</span>
+              </a>
+
+              <a href="https://github.com/maityankit2005-ship-it" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                <div class="contact-card-icon">🐙</div>
+                <div class="contact-card-details">
+                  <span class="contact-card-type">GitHub</span>
+                  <span class="contact-card-val">github.com/maityankit2005-ship-it</span>
+                </div>
+                <span class="contact-card-arrow">↗</span>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-card-link">
+                <div class="contact-card-icon">💼</div>
+                <div class="contact-card-details">
+                  <span class="contact-card-type">LinkedIn</span>
+                  <span class="contact-card-val">linkedin.com/in/ankitmaity</span>
+                </div>
+                <span class="contact-card-arrow">↗</span>
+              </a>
+            </div>
+
+            <div class="contact-location-badge">
+              <span class="loc-pin">📍</span>
+              <span>Based in India • Available for creative internships & remote collaborations</span>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-col">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="userName">Your Name</label>
+                <input type="text" id="userName" name="name" placeholder="E.g. Elena Rostova" required autocomplete="name">
+                <span class="field-error" id="nameError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail">Your Email</label>
+                <input type="email" id="userEmail" name="email" placeholder="elena@example.com" required autocomplete="email">
+                <span class="field-error" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Your Message</label>
+                <textarea id="userMessage" name="message" rows="5" placeholder="Tell me about your project, idea, or just say hello..." required></textarea>
+                <span class="field-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn" id="submitBtn">
+                <span>Send Message</span>
+                <svg class="icon-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              </button>
+
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MINIMAL FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="symbol">✦</span>
+          <span class="name">Ankit Maity</span>
+        </div>
+        <p class="footer-tagline">Designed & built with curiosity.</p>
+      </div>
+
+      <div class="footer-center">
+        <div class="local-clock" id="localClock">
+          <span class="clock-label">Local Time:</span>
+          <span class="clock-value" id="clockVal">--:--:--</span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="copyright">© 2026 Ankit Maity. All rights reserved.</p>
+        <a href="#hero" class="back-to-top" aria-label="Back to top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: LUMBO Project Deep Dive -->
+  <div class="project-modal" id="lumboModal" aria-hidden="true" role="dialog" aria-labelledby="lumboModalTitle">
+    <div class="modal-backdrop" data-close="lumboModal"></div>
+    <div class="modal-window">
+      <button class="modal-close" data-close="lumboModal" aria-label="Close modal">&times;</button>
+      <div class="modal-inner">
+        <span class="modal-kicker">Project Deep Dive</span>
+        <h3 class="modal-title" id="lumboModalTitle">LUMBO — Stylized Racing Experience</h3>
+        <p class="modal-lead">
+          LUMBO is an interactive game project combining retro-arcade vehicle handling with modern,
+          minimalist art direction. Designed with custom steering physics, lap-tracking algorithms,
+          and tactile soundscapes.
+        </p>
+
+        <div class="modal-grid-features">
+          <div class="m-feat">
+            <h4>Track & Path Geometry</h4>
+            <p>Built using Bézier curve interpolations to generate smooth circuit bends, road banking, and off-track friction thresholds.</p>
+          </div>
+          <div class="m-feat">
+            <h4>Dynamic Camera</h4>
+            <p>Spring-based camera lagging behind vehicle acceleration and rotation to provide a visceral sense of speed.</p>
+          </div>
+          <div class="m-feat">
+            <h4>Audio Synthesizer</h4>
+            <p>Web Audio API oscillator pitch manipulation keyed to RPM curves for immediate acoustic feedback.</p>
+          </div>
+          <div class="m-feat">
+            <h4>Ergonomic Mobile Controls</h4>
+            <p>Dual thumb touch triggers engineered to prevent thumb fatigue while maintaining precise drift control.</p>
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button class="btn btn-secondary" data-close="lumboModal">Close Preview</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Candy Crush Mini Deep Dive -->
+  <div class="project-modal" id="candyModal" aria-hidden="true" role="dialog" aria-labelledby="candyModalTitle">
+    <div class="modal-backdrop" data-close="candyModal"></div>
+    <div class="modal-window">
+      <button class="modal-close" data-close="candyModal" aria-label="Close modal">&times;</button>
+      <div class="modal-inner">
+        <span class="modal-kicker">Interactive Project Deep Dive</span>
+        <h3 class="modal-title" id="candyModalTitle">Candy Crush Mini — Match & Logic Grid</h3>
+        <p class="modal-lead">
+          An exploration of game mechanics, visual feedback, and responsive matrix logic. Designed
+          to deliver high sensory satisfaction through micro-animations, squash-and-stretch drops,
+          and sound stagers.
+        </p>
+
+        <div class="modal-grid-features">
+          <div class="m-feat">
+            <h4>Matrix Matching Engine</h4>
+            <p>Bidirectional scanning for 3, 4, and 5-in-a-row match combinations with automatic cascade refills.</p>
+          </div>
+          <div class="m-feat">
+            <h4>Physics & Easing</h4>
+            <p>Cubic bezier acceleration curves simulating physical candy weight and rebound vibrations.</p>
+          </div>
+          <div class="m-feat">
+            <h4>Color Harmony & Accessibility</h4>
+            <p>Carefully calibrated palette ensuring high contrast between game pieces for effortless recognition.</p>
+          </div>
+          <div class="m-feat">
+            <h4>Interactive State Machines</h4>
+            <p>Prevents illegal multi-touch inputs while cascading animations resolve smoothly.</p>
+          </div>
+        </div>
+
+        <div class="modal-footer-actions">
+          <button class="btn btn-secondary" data-close="candyModal">Close Preview</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
